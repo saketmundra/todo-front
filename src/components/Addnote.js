@@ -21,15 +21,15 @@ const Addnote = (props) => {
             <form>
                 <div className="form-group">
                     <label htmlFor="title">Title</label>
-                    <input type="text" className="form-control" id="title" value={note.title} name="title"  onChange={onChange} />
+                    <input type="text" className="form-control" id="title" placeholder='Min 5 Characters' value={note.title} name="title"  onChange={onChange} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Description</label>
-                    <input type="text" className="form-control" id="description" value={note.description} name="description" placeholder="" onChange={onChange} />
+                    <input type="text" className="form-control" id="description" placeholder='Min 10 Characters' value={note.description} name="description"  onChange={onChange} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Tag</label>
-                    <input type="text" className="form-control" id="tag" value={note.tag} name="tag" placeholder="" onChange={onChange} />
+                    <input type="text" className="form-control" id="tag" value={note.tag} name="tag" placeholder="private/home" onChange={onChange} />
                 </div>
                 <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>AddNote</button>
             </form>

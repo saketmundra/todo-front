@@ -5,7 +5,8 @@ const About = () => {
   
   return (
     
-    <div>This is about page
+    <div>
+      Hey I am Saket. Please visit <a href="https://saketmundra.netlify.app/">Link</a>
     </div>
   )
 }

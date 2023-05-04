@@ -8,7 +8,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const{name,email,password}=credentials
-        const response = await fetch(`https://inotebook-backnd.herokuapp.com/api/auth/createuser`, {
+        const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,7 +17,6 @@ const Signup = (props) => {
 
         });
         const json = await response.json();
-        console.log(json);
         if(json.success){
             localStorage.setItem('token',json.authtoken)
             navigate("/");
@@ -34,7 +33,7 @@ const Signup = (props) => {
 
     return (
         <div>
-             <h2>Signup to Continue iNotebook</h2>
+             <h2>Signup to Continue Todo</h2>
             <form onSubmit={handleSubmit}>
             <div className="form-group">
                     <label htmlFor="name">Name</label>

@@ -48,7 +48,7 @@ const Notes = (props) => {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+              <h5 className="modal-title" id="exampleModalLabel">Edit To-Do</h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -78,7 +78,7 @@ const Notes = (props) => {
         </div>
       </div>
 
-      <h1>Your Notes</h1>
+      <h1>Your To-do</h1>
       <div className='row'>
         {notes.map((note) => {
           return <Noteitem key={note._id} showAlert={props.showAlert} updateNote={updateNote} note={note} />

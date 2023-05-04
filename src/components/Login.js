@@ -10,7 +10,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5000/api/auth/login`, {
+        const response = await fetch(`https://todoback-3qfa.onrender.com/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const Login = (props) => {
 
     return (
         <div>
-            <h2>Login to Continue iNotebook</h2>
+            <h2>Login to Continue To-do</h2>
             <form onSubmit={handleSubmit}  >
                 <div className="form-group">
                     <label htmlFor="email">Email address</label>
